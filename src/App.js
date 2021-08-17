@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import logo from './w-logo.svg';
 import './App.css';
-//import { Card } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 // importer semantic et travailler
 
 
