@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import logo from './w-logo.svg';
 import './App.css';
+import CardExempleCard from './components/CardExempleCard'
 import { Card } from 'semantic-ui-react'
 
 
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <main>
+      <CardExempleCard></CardExempleCard>
       {/* <div className="head">
         <img className="w-logo" src={logo} alt="" ></img>
       </div>
