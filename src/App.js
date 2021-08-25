@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import logo from './w-logo.svg';
 import './App.css';
 import CardExempleCard from './components/CardExempleCard'
 
