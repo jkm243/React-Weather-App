@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
 
@@ -14,7 +15,7 @@ const CardExampleCard = () => (
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <a>
+      <a href="">
         <Icon name='user' />
         22 Friends
       </a>
