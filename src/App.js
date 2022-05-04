@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './App.css';
+import Weather from './components/Weather'
 
 
 function App() {
@@ -24,25 +25,20 @@ function App() {
     fetchData();
   }, [lat, long])
 
-  console.log("Latitude is: ", lat)
-  console.log("Longitude is: ", long)
+  // console.log("Latitude is: ", lat)
+  // console.log("Longitude is: ", long)
 
   return (
     <main>
       <div className="head">
         <img className="w-logo" src="w-logo.svg" alt="logo weather" ></img>
       </div>
-      <div className="head space">
-        <input type="text" className="txt" placeholder="Enter the name of city"></input>
-      </div>
-      <div className="head space">
-        <input type="radio" id="fareinheit" name="fav_temp" value="Fareinheit"></input>
-        <label for="fareinheit">Fareinheit</label><br></br>
-        <input type="radio" id="celsius" name="fav_temp" value="Celsius"></input>
-        <label for="celsius">Celsius</label>
-      </div>
-      <div className="head space">
-        <input className="srch" type="button" value="Search"></input>
+      <div>
+        {(typeof data.main !== 'undefined') ? (
+          <Weather weatherData={data}/>
+        ): (
+          <div>Not found</div>
+        )}
       </div>
     </main>
   );
