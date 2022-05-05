@@ -1,45 +1,27 @@
-import React, { useEffect, useState } from 'react'
-import './App.css';
-import Weather from './components/Weather'
-
-
+import React from 'react'
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import Home from "./components/Home"
+import Nav from "./components/Nav"
+import Header from './components/Header';
+import Footer from "./components/Footer"
+import About from "./components/About"
+import Weather from "./components/Weather"
 function App() {
-  const [lat, setLat] = useState([])
-  const [long, setLong] = useState([])
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        setLat(position.coords.latitude);
-        setLong(position.coords.longitude);
-      });
-
-      await fetch(`${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`)
-        .then(res => res.json())
-        .then(result => {
-          setData(result)
-          console.log(result);
-        });
-    }
-    fetchData();
-  }, [lat, long])
-
-  // console.log("Latitude is: ", lat)
-  // console.log("Longitude is: ", long)
-
   return (
-    <main>
-
-      <div>
-        {(typeof data.main !== 'undefined') ? (
-          <Weather weatherData={data}/>
-        ): (
-          <div className="w-logo">Not found</div>
-        )}
-      </div>
-    </main>
-  );
+    <div>
+      <Header />
+      {<BrowserRouter>
+        <Nav />
+        <Switch>
+          <Route exact path="/weather" component={Weather} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Redirect to="/" />
+        </Switch>
+        <Footer />
+      </BrowserRouter>}
+    </div>
+  )
 }
 
-export default App;
+export default App
