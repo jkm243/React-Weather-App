@@ -1,24 +1,25 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/Home"
-import Nav from "./components/Nav"
+import NavBarComp from "./components/NavBarComp"
 import Header from './components/Header';
-import Footer from "./components/Footer"
-import About from "./components/About"
+import FooterComp from "./components/FooterComp"
+import AboutComp from "./components/AboutComp"
 import Weather from "./components/Weather"
+
 function App() {
   return (
     <div>
       <Header />
       {<BrowserRouter>
-        <Nav />
-        <Switch>
-          <Route exact path="/weather" component={Weather} />
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Redirect to="/" />
-        </Switch>
-        <Footer />
+        <NavBarComp />
+        <Routes>
+          <Route exact path="/weather" element={<Weather/>} />
+          <Route exact path="/" element={<Home/>} />
+          <Route exact path="/about" element={<AboutComp/>} />
+          <Route path="/" element={<Navigate replace to="/" />} /> 
+        </Routes>
+        <FooterComp />
       </BrowserRouter>}
     </div>
   )

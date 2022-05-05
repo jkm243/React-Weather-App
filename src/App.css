@@ -1,43 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
 
-
-.space{
-  margin-top: 2rem;
+*{
+    font-family: 'Recursive', sans-serif;
 }
-
-.txt{
-  font-size: 15px;
-  padding: 10px 20px;
-}
-
-.txt:focus{
-  border-color: #6C63FF;
-}
-
-.srch{
-  font-size: 15px;
-  background-color: #6C63FF;
-  border: none;
-  border-radius: 5rem 5rem 5rem 5rem;
-  color: white;
-  text-decoration: none;
-  padding: 16px 32px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.srch:hover{
-  background-color: #383574;
-}
-
-.head{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.w-logo{
-  margin: 1rem;
-  width: 50%;
-}
-
