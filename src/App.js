@@ -30,14 +30,12 @@ function App() {
 
   return (
     <main>
-      <div className="head">
-        <img className="w-logo" src="w-logo.svg" alt="logo weather" ></img>
-      </div>
+
       <div>
         {(typeof data.main !== 'undefined') ? (
           <Weather weatherData={data}/>
         ): (
-          <div>Not found</div>
+          <div className="w-logo">Not found</div>
         )}
       </div>
     </main>
