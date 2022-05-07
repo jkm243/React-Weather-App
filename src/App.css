@@ -1,5 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 *{
-    font-family: 'Recursive', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.corps{
+    background-color: #000000;
+opacity: 1;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 9px ), repeating-linear-gradient( #36363655, #363636 );
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import "./styles/Home.css"
 import axios from "axios";
 
+
 function Home() {
 
     const [weather, setWeather] = useState('');
@@ -66,10 +67,6 @@ function Home() {
 
     return (
     <div>
-        <div className="lnkkit">
-            <a href="http://www.kitraigarh.com/index.aspx">Your location:</a>
-        </div>
-
         <div className="CTW">
 
             <div className="col">
@@ -79,9 +76,12 @@ function Home() {
             </div>
 
             <div className="col">
-                <p className="hhead">{weather.city} Weather</p>
+                <p className="hhead">{weather.city}</p>
                 <p> Weather : {weather.descp}</p>
                 <p> Temperature : {C.toFixed(2)} &#8451;</p>
+                <p> Fells like : {C.toFixed(2)} &#8451;</p>
+                <p> Humidity : {weather.humidity}</p>
+                <p> Pressure : {weather.pressure}</p>
             </div>
         </div >
     </div>

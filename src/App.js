@@ -7,9 +7,10 @@ import FooterComp from "./components/FooterComp"
 import AboutComp from "./components/AboutComp"
 import Weather from "./components/Weather"
 
+
 function App() {
   return (
-    <div>
+    <div className='corps'>
       <Header />
       {<BrowserRouter>
         <NavBarComp />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import "./styles/Weather.css"
 import axios from 'axios'
 
@@ -9,25 +9,11 @@ function Weather() {
     const [city, setCity] = useState('');
     const apiKey = '98866076b8b1e53e2ad524fb15cf66ea';
 
-        // Localisation
-        const [lat, setLat] = useState([]);
-        const [long, setLong] = useState([]);
-      
-        useEffect(() => {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            setLat(position.coords.latitude);
-            setLong(position.coords.longitude);
-          });
-      
-          // console.log("Latitude is:", lat)
-          // console.log("Longitude is:", long)
-        }, [lat, long]);
-
     // weather
     const apiCall = async (e) => {
         e.preventDefault()
-
-        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
+        const loc = e.target.elements.loc.value
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${apiKey}`;
         const req = axios.get(url);
         const res = await req;
         setWeather({
@@ -69,11 +55,10 @@ function Weather() {
         </div>
     }
     return (<div>
-        <div className="weathhead">Weather Info</div>
         <div className="mainweather">
             <div className="weather">
                 <form onSubmit={apiCall} className="form">
-                    <input type="text" placeholder="city" name="loc" />
+                    <input type="text" placeholder="Ex: London" name="loc" />
                     <button className="bttn">Search</button>
                 </form>
 

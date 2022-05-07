@@ -3,7 +3,7 @@ import "./styles/Footer.css"
 function Footer() {
     return (
         <div>
-            <p className="footer">Created by : Sandeep Kumar Patel &nbsp;<a href="https://www.instagram.com/sandy_abhi47/">@instagram</a></p>
+            <p className="footer">Made by: &nbsp;<a href="https://www.jkmconception.com">JkmConception</a></p>
         </div>
     )
 }

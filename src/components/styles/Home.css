@@ -1,13 +1,14 @@
 
 .lnkkit{
     padding: 15px;
-    font-family: cursive;
+    font-family: 'Poppins';
     font-size: 18px;
     padding-bottom: 20px;
     text-align: center;
 }
 
 .CTW{
+    margin: 2em;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -26,42 +27,28 @@
     }
 
 .col{
-    box-shadow:0 0 10px;
-    background-color: rgb(184, 188, 189);
+    background-color: rgb(0, 117, 146);
     width: 300px;
-    height: 150px;
+    height: 100%;
     font-weight: 600;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Poppins';
     text-align: center;
     border-radius: 7px;
     padding-bottom: 5px;
     font-size: 17px;
+    color: white;
 }
 
 .hhead{
-    background-color: rgb(37, 38, 48);
+    background-color: #333;
     color: white;
-    box-shadow: inset 1px 1px 15px rgb(18, 4, 41);
+    border-radius: 7px;
+    /* box-shadow: inset 1px 1px 15px rgb(18, 4, 41); */
     margin: 0px;
     padding: 10px;
     font-size: 20px;
 }
 
-.map{
-    width: 300px;
-    height: 345px;
-    margin:0px;
-    font-weight: 600;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: rgb(158, 166, 167);
-    box-shadow:0 0 10px;
-}
-
 p{
     text-align: center;
-}
-
-.mapp{
-    margin: 0px;
-    
 }

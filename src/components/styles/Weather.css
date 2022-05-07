@@ -4,35 +4,40 @@ body{
 }
 
 .form{
-justify-content: center;
-display: flex;
-padding-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    padding-bottom: 5px;
 }
+
 .form > input{
-    font-size: 17px;
+    font-size: 30px;
     outline: none;
     size: 20px;
-    border: 1px solid;
+    border: 1px solid rgb(0, 117, 146);
     border-radius: 5px;
-    font-family:unset;
+    font-family: 'Poppins';
+    padding-left: 10px;
 }
 
 button {
     transition-duration: 0.4s;
-    font-family:unset;
+    font-family: 'Poppins';
     font-size: 17px;
-    border: 1px solid;
+    border: 1px solid white;
     border-radius: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   
 button:hover {
     background-color: #333333; 
     color: white;
+    border: 1px solid rgb(0, 117, 146);
   }
 
 .winfo{
     margin-top: 6px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Poppins';
     font-size: 30px;
     text-align: center;
 }
@@ -40,11 +45,11 @@ button:hover {
     border-radius: 10px;
     margin: 10px;
     width: 75%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Poppins';
     border: 1px solid rgb(8, 8, 8);
     padding: 20px;
-    box-shadow: 10px 10px 5px #aaaaaa;
-    background-color: rgb(158, 166, 167);
+    /* box-shadow: 10px 10px 5px #aaaaaa; */
+    background-color: rgb(0, 117, 146);
 }
 
 .weathhead{
