@@ -28,7 +28,9 @@ function Home() {
             setWeather({
                 descp: res.data.weather[0].description,
                 temp: res.data.main.temp,
-                city: res.data.name
+                city: res.data.name,
+                humidity: res.data.main.humidity,
+                press: res.data.main.pressure,
             })
           })
           .catch(function (error) {
@@ -80,8 +82,8 @@ function Home() {
                 <p> Weather : {weather.descp}</p>
                 <p> Temperature : {C.toFixed(2)} &#8451;</p>
                 <p> Fells like : {C.toFixed(2)} &#8451;</p>
-                <p> Humidity : {weather.humidity}</p>
-                <p> Pressure : {weather.pressure}</p>
+                <p> Humidity : {weather.humidity} %</p>
+                <p> Pressure : {weather.press} mb</p>
             </div>
         </div >
     </div>
